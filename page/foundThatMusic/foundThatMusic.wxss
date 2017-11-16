@@ -82,3 +82,8 @@ page{
   bottom: 0;
   transition: all .3s ease-in-out;
 }
+
+.slide-image{
+  width: 100%;
+  height: 340rpx;
+}

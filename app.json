@@ -19,6 +19,7 @@
     "backgroundColor": "#243135",
     "borderStyle": "white",
     "position": "bottom",
+    "color": "#a3a3a6",
     "list": [
       {
         "pagePath": "page/foundThatMusic/foundThatMusic",

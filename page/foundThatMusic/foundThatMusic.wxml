@@ -18,7 +18,39 @@
   </view>
   <view class='findOutContent'>
     <view wx:if='{{ positionNum == 7 }}'>
-      <text>音乐</text>
+      <swiper indicator-dots autoplay circular indicator-color='#f6eee6' indicator-active-color='#d83931'>
+        <block wx:for="{{ roasting }}">
+          <swiper-item>
+            <image src="{{ item }}" class="slide-image"/>
+          </swiper-item>
+        </block> 
+      </swiper>
+      <view class='othersBox'>
+          <view class='othersList'>
+            <view class='othersIcon'>
+              <image src='/images/fm.png'></image>
+            </view>
+            <text>私人FM</text>
+          </view>
+          <view class='othersList'>
+            <view class='othersIcon'>
+              <image src='/images/calendar.png'></image>
+            </view>
+            <text>每日推荐</text>
+          </view>
+          <view class='othersList'>
+            <view class='othersIcon'>
+              <image src='/images/playlist.png'></image>
+            </view>
+            <text>歌单</text>
+          </view>
+          <view class='othersList'>
+            <view class='othersIcon'>
+              <image src='/images/leaderboard.png'></image>
+            </view>
+            <text>排行榜</text>
+          </view>
+        </view>
     </view>
     <view wx:elif='{{ positionNum == 40 }}'>
       <text>视频</text>

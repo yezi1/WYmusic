@@ -15,28 +15,23 @@ Page({
     this.data.searchtext = event.detail.value;
     if (this.data.searchtext.length > 0) {
       this.data.searchState = true;
-      this.setData({
-        searchState: this.data.searchState
-      });
     }else{
       this.data.searchState = false;
-      this.setData({
-        searchState: this.data.searchState
-      });
     }
+    this.setData({
+      searchState: this.data.searchState
+    });
   },
 
   emptying: function () {
     this.data.searchtext = '';
-    this.setData({
-      searchinput: this.data.searchtext
-    });
     if (this.data.searchtext.length == 0) {
       this.data.searchState = false;
-      this.setData({
-        searchState: this.data.searchState
-      });
     }
+    this.setData({
+      searchinput: this.data.searchtext,
+      searchState: this.data.searchState
+    });
   },
 
   position: function (event) {
@@ -44,23 +39,17 @@ Page({
     switch (this.data.positionNum) {
       case '1':
         this.data.positionNum = '7';
-        this.setData({
-          positionNum: this.data.positionNum
-        });
         break;
       case '2':
         this.data.positionNum = '40';
-        this.setData({
-          positionNum: this.data.positionNum
-        });
         break;
       case '3':
         this.data.positionNum = '73';
-        this.setData({
-          positionNum: this.data.positionNum
-        });
         break;
     }
+    this.setData({
+      positionNum: this.data.positionNum
+    });
   },
 
   /**
@@ -73,8 +62,12 @@ Page({
       method: 'GET',
       success: function (res) {
         that.setData({
-          classification: res.data.classification
+          classification: res.data.classification,
+          roasting: res.data.roasting
         });
+      },
+      fail: function (err) {
+        console.log(err.errMsg);
       }
     })
   },
