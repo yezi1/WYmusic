@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "page/startPage/startPage",
+    "page/foundThatMusic/foundThatMusic",
+    "page/MeMusic/MeMusic",
+    "page/friend/friend",
+    "page/accountNumber/accountNumber"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d53c32",
+    "navigationBarTextStyle": "#ffffff",
+    "navigationBarTitleText": "网易云音乐",
+    "backgroundColor": "#d53c32",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": "50"
+  },
+  "tabBar": {
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#243135",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "page/foundThatMusic/foundThatMusic",
+        "text": "发现音乐",
+        "iconPath": "/images/music.png",
+        "selectedIconPath": "/images/music_on.png"
+      },
+      {
+        "pagePath": "page/MeMusic/MeMusic",
+        "text": "我的音乐",
+        "iconPath": "/images/myMusic.png",
+        "selectedIconPath": "/images/myMusic_on.png"
+      },
+      {
+        "pagePath": "page/friend/friend",
+        "text": "朋友",
+        "iconPath": "/images/friend.png",
+        "selectedIconPath": "/images/friend_on.png"
+      },
+      {
+        "pagePath": "page/accountNumber/accountNumber",
+        "text": "账号",
+        "iconPath": "/images/accountNumber.png",
+        "selectedIconPath": "/images/accountNumber_on.png"
+      }
+    ]
+  }
+}

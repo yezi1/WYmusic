@@ -1,0 +1,5 @@
+<view class='startContainer' style='background-image: url("../../images/StartPage.jpg"); height: {{ systemH }}px;'>
+  <view class='skip'>
+    <text catchtap='jump'>跳过{{ countdown }}</text>
+  </view>
+</view>

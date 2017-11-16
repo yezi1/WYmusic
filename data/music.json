@@ -1,0 +1,16 @@
+{
+  "classification": [
+    {
+      "text": "音乐",
+      "index": "1"
+    },
+    {
+      "text": "视频",
+      "index": "2"
+    },
+    {
+      "text": "电台",
+      "index": "3"
+    }
+  ]
+}

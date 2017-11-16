@@ -1,0 +1,84 @@
+/* page/foundThatMusic/foundThatMusic.wxss */
+page{
+  padding-top: 172rpx;
+}
+
+.searchBox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.search{
+  height: 92rpx;
+  background-color: #eeeef3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  padding: 0 15px;
+}
+
+.searchIcon{
+  flex: 60rpx 0 0;
+  height: 60rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 26rpx;
+  border-bottom-left-radius: 26rpx;
+}
+
+.searchIcon image{
+  width: 75%;
+  height: 75%;
+}
+
+.search input{
+  background-color: white;
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.cancel{
+  flex: 80rpx 0 0;
+  height: 60rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-top-right-radius: 26rpx;
+  border-bottom-right-radius: 26rpx;
+}
+
+.cancel image{
+  width: 45%;
+  height: 55%;
+}
+
+.classification{
+  height: 80rpx;
+  border-bottom: 1px solid #e0e0dd;
+  display: flex;
+  position: relative;
+}
+
+.classification text{
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 14px;
+}
+
+.redLine{
+  width: 20%;
+  height: 3px;
+  background-color: #d53c32;
+  position: absolute;
+  bottom: 0;
+  transition: all .3s ease-in-out;
+}

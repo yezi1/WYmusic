@@ -1,0 +1,30 @@
+<view class='findOutBox'>
+  <view class='searchBox'>
+    <view class='search'>
+      <view class='searchIcon'>
+        <image src='/images/searchIcon.png'></image>
+      </view>
+      <input placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
+      <view class='cancel'>
+        <image src='/images/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
+      </view>
+    </view>
+    <view class='classification'>
+      <block wx:for='{{ classification }}'>
+        <text catchtap='position' data-index='{{ item.index }}'>{{ item.text }}</text>
+      </block>
+      <view class='redLine' style='left: {{ positionNum }}%'></view>
+    </view>
+  </view>
+  <view class='findOutContent'>
+    <view wx:if='{{ positionNum == 7 }}'>
+      <text>音乐</text>
+    </view>
+    <view wx:elif='{{ positionNum == 40 }}'>
+      <text>视频</text>
+    </view>
+    <view wx:else>
+      <text>电台</text>
+    </view>
+  </view>
+</view>
