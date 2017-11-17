@@ -26,31 +26,61 @@
         </block> 
       </swiper>
       <view class='othersBox'>
+        <block wx:for='{{ column }}'>
           <view class='othersList'>
             <view class='othersIcon'>
-              <image src='/images/fm.png'></image>
+              <image src='{{ item.images }}'></image>
             </view>
-            <text>私人FM</text>
+            <text>{{ item.text }}</text>
           </view>
-          <view class='othersList'>
-            <view class='othersIcon'>
-              <image src='/images/calendar.png'></image>
-            </view>
-            <text>每日推荐</text>
-          </view>
-          <view class='othersList'>
-            <view class='othersIcon'>
-              <image src='/images/playlist.png'></image>
-            </view>
-            <text>歌单</text>
-          </view>
-          <view class='othersList'>
-            <view class='othersIcon'>
-              <image src='/images/leaderboard.png'></image>
-            </view>
-            <text>排行榜</text>
-          </view>
+        </block>
+      </view>
+      <view class='hierarchy'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>推荐歌单</text>
+          <image src='/images/rightArrow.png'></image>
         </view>
+        <view class='hierarchyList'>
+          <block wx:for='{{ recommend }}'>
+            <view class='hierarchycontent'>
+              <view class='hierarchyImg' style='background-image: url("{{ item.imgUrl }}");'></view>
+              <text>{{ item.text }}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class='hierarchy'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>独家放送</text>
+          <image src='/images/rightArrow.png'></image>
+        </view>
+        <view class='exclusive'>
+          <block wx:for='{{ exclusive }}'>
+            <view class='exclusiveList'>
+              <image src='{{ item.imgUrl }}' mode='aspectFit'></image>
+              <text>{{ item.text }}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+            <view class='hierarchy'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>最新音乐</text>
+          <image src='/images/rightArrow.png'></image>
+        </view>
+        <view class='hierarchyList'>
+          <block wx:for='{{ latest }}'>
+            <view class='hierarchycontent'>
+              <view class='hierarchyImg' style='background-image: url("{{ item.imgUrl }}");'></view>
+              <text>{{ item.text }}</text>
+              <text class='describe'>{{ item.describe }}</text>
+            </view>
+          </block>
+        </view>
+      </view>
     </view>
     <view wx:elif='{{ positionNum == 40 }}'>
       <text>视频</text>

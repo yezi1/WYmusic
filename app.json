@@ -11,7 +11,7 @@
     "navigationBarTextStyle": "#ffffff",
     "navigationBarTitleText": "网易云音乐",
     "backgroundColor": "#d53c32",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "onReachBottomDistance": "50"
   },
   "tabBar": {

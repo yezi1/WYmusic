@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    countdown: '1'
+    countdown: '3'
   },
 
   systemHeight: function () {

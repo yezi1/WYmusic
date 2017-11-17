@@ -1,0 +1,8 @@
+page{
+  background-color: #fafdff;
+  font-size: 13px;
+}
+
+text{
+  color: #343435;
+}

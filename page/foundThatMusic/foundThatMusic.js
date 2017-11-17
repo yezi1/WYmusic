@@ -63,7 +63,11 @@ Page({
       success: function (res) {
         that.setData({
           classification: res.data.classification,
-          roasting: res.data.roasting
+          roasting: res.data.roasting,
+          column: res.data.column,
+          recommend: res.data.recommend,
+          exclusive: res.data.exclusive,
+          latest: res.data.latest
         });
       },
       fail: function (err) {
@@ -76,7 +80,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    let res = wx.getSystemInfoSync();
+    let imgW1 = res.screenWidth*0.328;
+    this.setData({
+      imgW1: imgW1
+    });
   },
 
   /**
@@ -111,7 +119,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    console.log('11');
   },
 
   /**

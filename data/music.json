@@ -19,5 +19,95 @@
     "http://p1.music.126.net/ucJ3e3HANkECn0jhlZF12w==/19060034067938962.jpg",
     "http://p1.music.126.net/eZUsVJV_GrY1XQ3TUFg0Lg==/18636722092956935.jpg",
     "http://p1.music.126.net/gh5Bh2p5RD9KezIeYIk7DQ==/19226060323736693.jpg"
+  ],
+  "column": [
+    {
+      "images": "/images/fm.png",
+      "text": "私人FM"
+    },
+    {
+      "images": "/images/calendar.png",
+      "text": "每日推荐"
+    },
+    {
+      "images": "/images/playlist.png",
+      "text": "歌单"
+    },
+    {
+      "images": "/images/leaderboard.png",
+      "text": "排行榜"
+    }
+  ],
+  "recommend": [
+    {
+      "imgUrl": "/images/recommend_1.jpg",
+      "text": "致因你而来而万物生长的内心"
+    },
+    {
+      "imgUrl": "/images/recommend_2.jpg",
+      "text": "填翻古风 | 赋新词 诉新情"
+    },
+    {
+      "imgUrl": "/images/recommend_3.jpg",
+      "text": "【2017】热播影视剧原声歌曲盘点"
+    },
+    {
+      "imgUrl": "/images/recommend_4.jpg",
+      "text": "[日系女毒]，至柔至幻，美到窒息"
+    },
+    {
+      "imgUrl": "/images/recommend_5.jpg",
+      "text": "【睡觉听的歌】古风和民谣的催眠曲目"
+    },
+    {
+      "imgUrl": "/images/recommend_6.jpg",
+      "text": "`日语心碎集#病名为爱/"
+    }
+  ],
+  "exclusive": [
+    {
+      "imgUrl": "/images/exclusive_1.jpg",
+      "text": "柔情万种！《刚好遇见你X See You Again》精分翻唱"
+    },
+    {
+      "imgUrl": "/images/exclusive_2.jpg",
+      "text": "来听尤克里里弹唱版《理想三旬》给你清新活力"
+    },
+    {
+      "imgUrl": "/images/exclusive_3.jpg",
+      "text": "霉霉Taylor Swift全新专辑《reputation》火热售卖中！"
+    }
+  ],
+  "latest": [
+    {
+      "imgUrl": "/images/latest_1.jpg",
+      "text": "新歌推荐",
+      "describe": "符合口味的新歌"
+    },
+    {
+      "imgUrl": "/images/latest_2.jpg",
+      "text": "Alpha Go",
+      "describe": "The Shanghai Resto..."
+    },
+    {
+      "imgUrl": "/images/latest_3.jpg",
+      "text": "闲人免进",
+      "describe": "打扰一下乐团"
+    },
+    {
+      "imgUrl": "/images/latest_4.jpg",
+      "text": "别",
+      "describe": "薛之谦"
+    },
+    {
+      "imgUrl": "/images/latest_5.jpg",
+      "text": "祝你幸福",
+      "describe": "李荣浩"
+    },
+    {
+      "imgUrl": "/images/latest_6.jpg",
+      "text": "嗜睡症",
+      "describe": "刘惜君"
+    }
   ]
 }
