@@ -22,92 +22,157 @@
   ],
   "column": [
     {
-      "images": "/images/fm.png",
+      "images": "/images/foundThatMusic/fm.png",
       "text": "私人FM"
     },
     {
-      "images": "/images/calendar.png",
+      "images": "/images/foundThatMusic/calendar.png",
       "text": "每日推荐"
     },
     {
-      "images": "/images/playlist.png",
+      "images": "/images/foundThatMusic/playlist.png",
       "text": "歌单"
     },
     {
-      "images": "/images/leaderboard.png",
+      "images": "/images/foundThatMusic/leaderboard.png",
       "text": "排行榜"
     }
   ],
   "recommend": [
     {
-      "imgUrl": "/images/recommend_1.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_1.jpg",
       "text": "致因你而来而万物生长的内心"
     },
     {
-      "imgUrl": "/images/recommend_2.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_2.jpg",
       "text": "填翻古风 | 赋新词 诉新情"
     },
     {
-      "imgUrl": "/images/recommend_3.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_3.jpg",
       "text": "【2017】热播影视剧原声歌曲盘点"
     },
     {
-      "imgUrl": "/images/recommend_4.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_4.jpg",
       "text": "[日系女毒]，至柔至幻，美到窒息"
     },
     {
-      "imgUrl": "/images/recommend_5.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_5.jpg",
       "text": "【睡觉听的歌】古风和民谣的催眠曲目"
     },
     {
-      "imgUrl": "/images/recommend_6.jpg",
+      "imgUrl": "/images/foundThatMusic/recommend/recommend_6.jpg",
       "text": "`日语心碎集#病名为爱/"
     }
   ],
   "exclusive": [
     {
-      "imgUrl": "/images/exclusive_1.jpg",
+      "imgUrl": "/images/foundThatMusic/exclusive/exclusive_1.jpg",
       "text": "柔情万种！《刚好遇见你X See You Again》精分翻唱"
     },
     {
-      "imgUrl": "/images/exclusive_2.jpg",
+      "imgUrl": "/images/foundThatMusic/exclusive/exclusive_2.jpg",
       "text": "来听尤克里里弹唱版《理想三旬》给你清新活力"
     },
     {
-      "imgUrl": "/images/exclusive_3.jpg",
+      "imgUrl": "/images/foundThatMusic/exclusive/exclusive_3.jpg",
       "text": "霉霉Taylor Swift全新专辑《reputation》火热售卖中！"
     }
   ],
   "latest": [
     {
-      "imgUrl": "/images/latest_1.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_1.jpg",
       "text": "新歌推荐",
       "describe": "符合口味的新歌"
     },
     {
-      "imgUrl": "/images/latest_2.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_2.jpg",
       "text": "Alpha Go",
       "describe": "The Shanghai Resto..."
     },
     {
-      "imgUrl": "/images/latest_3.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_3.jpg",
       "text": "闲人免进",
       "describe": "打扰一下乐团"
     },
     {
-      "imgUrl": "/images/latest_4.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_4.jpg",
       "text": "别",
       "describe": "薛之谦"
     },
     {
-      "imgUrl": "/images/latest_5.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_5.jpg",
       "text": "祝你幸福",
       "describe": "李荣浩"
     },
     {
-      "imgUrl": "/images/latest_6.jpg",
+      "imgUrl": "/images/foundThatMusic/latest/latest_6.jpg",
       "text": "嗜睡症",
       "describe": "刘惜君"
+    }
+  ],
+  "mv": [
+    {
+      "imgUrl": "/images/foundThatMusic/mv/mv_1.png",
+      "text": "The Star",
+      "particulars": "Mariah Carey"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/mv/mv_2.png",
+      "text": "蓝色Monday",
+      "particulars": "卫兰/袁娅维"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/mv/mv_3.png",
+      "text": "再见(Vlub Remix)",
+      "particulars": "G.E.M.邓紫棋"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/mv/mv_4.png",
+      "text": "Anicca",
+      "particulars": "原田ひとみ"
+    }
+  ],
+  "select": [
+    {
+      "imgUrl": "/images/foundThatMusic/select/select_1.png",
+      "text": "舒米恩：写一首歌，让阿美族被听到",
+      "read": "7232"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/select/select_2.png",
+      "text": "靠抖腿取暖？那送你这六首古典音乐",
+      "read": "19047"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/select/select_3.png",
+      "text": "18岁和40岁听到的陈奕迅，到底有什么不同？",
+      "read": "31445"
+    }
+  ],
+  "anchor": [
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "影响你未来的100次心理谈话"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "DJ邓曼的音乐角落"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "焦元傅古典音乐入门指南"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "每晚十点，读点书抚慰的心灵"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "切换萝莉御姐音毫无违和感"
+    },
+    {
+      "imgUrl": "/images/foundThatMusic/anchor/anchor_1.png",
+      "text": "每天一篇散文触碰灵魂的散文"
     }
   ]
 }

@@ -2,11 +2,11 @@
   <view class='searchBox'>
     <view class='search'>
       <view class='searchIcon'>
-        <image src='/images/searchIcon.png'></image>
+        <image src='/images/foundThatMusic/searchIcon.png'></image>
       </view>
       <input placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
       <view class='cancel'>
-        <image src='/images/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
+        <image src='/images/foundThatMusic/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
     <view class='classification'>
@@ -21,9 +21,9 @@
       <swiper indicator-dots autoplay circular indicator-color='#f6eee6' indicator-active-color='#d83931'>
         <block wx:for="{{ roasting }}">
           <swiper-item>
-            <image src="{{ item }}" class="slide-image"/>
+            <image src="{{ item }}" class="slide-image" />
           </swiper-item>
-        </block> 
+        </block>
       </swiper>
       <view class='othersBox'>
         <block wx:for='{{ column }}'>
@@ -39,7 +39,7 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐歌单</text>
-          <image src='/images/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/rightArrow.png'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ recommend }}'>
@@ -54,7 +54,7 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>独家放送</text>
-          <image src='/images/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/rightArrow.png'></image>
         </view>
         <view class='exclusive'>
           <block wx:for='{{ exclusive }}'>
@@ -65,11 +65,11 @@
           </block>
         </view>
       </view>
-            <view class='hierarchy'>
+      <view class='hierarchy'>
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>最新音乐</text>
-          <image src='/images/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/rightArrow.png'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ latest }}'>
@@ -79,6 +79,16 @@
               <text class='describe'>{{ item.describe }}</text>
             </view>
           </block>
+        </view>
+      </view>
+      <view class='hierarchy'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>推荐MV</text>
+          <image src='/images/foundThatMusic/rightArrow.png'></image>
+        </view>
+        <view class='hierarchyList'>
+
         </view>
       </view>
     </view>
