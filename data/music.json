@@ -22,19 +22,19 @@
   ],
   "column": [
     {
-      "images": "/images/foundThatMusic/fm.png",
+      "images": "/images/foundThatMusic/other/fm.png",
       "text": "私人FM"
     },
     {
-      "images": "/images/foundThatMusic/calendar.png",
+      "images": "/images/foundThatMusic/other/calendar.png",
       "text": "每日推荐"
     },
     {
-      "images": "/images/foundThatMusic/playlist.png",
+      "images": "/images/foundThatMusic/other/playlist.png",
       "text": "歌单"
     },
     {
-      "images": "/images/foundThatMusic/leaderboard.png",
+      "images": "/images/foundThatMusic/other/leaderboard.png",
       "text": "排行榜"
     }
   ],

@@ -67,7 +67,8 @@ Page({
           column: res.data.column,
           recommend: res.data.recommend,
           exclusive: res.data.exclusive,
-          latest: res.data.latest
+          latest: res.data.latest,
+          mv: res.data.mv
         });
       },
       fail: function (err) {

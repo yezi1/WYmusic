@@ -1,14 +1,18 @@
 <view class='findOutBox'>
+
+  <!-- 搜索框 -->
   <view class='searchBox'>
     <view class='search'>
       <view class='searchIcon'>
-        <image src='/images/foundThatMusic/searchIcon.png'></image>
+        <image src='/images/foundThatMusic/other/searchIcon.png'></image>
       </view>
       <input placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
       <view class='cancel'>
-        <image src='/images/foundThatMusic/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
+        <image src='/images/foundThatMusic/other/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
+
+    <!-- 轮播 -->
     <view class='classification'>
       <block wx:for='{{ classification }}'>
         <text catchtap='position' data-index='{{ item.index }}'>{{ item.text }}</text>
@@ -16,6 +20,8 @@
       <view class='redLine' style='left: {{ positionNum }}%'></view>
     </view>
   </view>
+
+  <!-- 类别切换 -->
   <view class='findOutContent'>
     <view wx:if='{{ positionNum == 7 }}'>
       <swiper indicator-dots autoplay circular indicator-color='#f6eee6' indicator-active-color='#d83931'>
@@ -36,10 +42,12 @@
         </block>
       </view>
       <view class='hierarchy'>
+
+        <!-- 推荐歌单 -->
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐歌单</text>
-          <image src='/images/foundThatMusic/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ recommend }}'>
@@ -50,11 +58,13 @@
           </block>
         </view>
       </view>
+
+      <!-- 独家放送 -->
       <view class='hierarchy'>
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>独家放送</text>
-          <image src='/images/foundThatMusic/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
         </view>
         <view class='exclusive'>
           <block wx:for='{{ exclusive }}'>
@@ -65,11 +75,13 @@
           </block>
         </view>
       </view>
+
+      <!-- 最新音乐 -->
       <view class='hierarchy'>
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>最新音乐</text>
-          <image src='/images/foundThatMusic/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ latest }}'>
@@ -81,14 +93,21 @@
           </block>
         </view>
       </view>
+
+      <!-- 推荐MV -->
       <view class='hierarchy'>
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐MV</text>
-          <image src='/images/foundThatMusic/rightArrow.png'></image>
+          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
         </view>
         <view class='hierarchyList'>
-
+          <block wx:for='{{ mv }}'>
+            <view class='mv'>
+              <image src='{{ item.imgUrl }}'></image>
+              <text>{{ item.text }}</text>
+            </view>
+          </block>
         </view>
       </view>
     </view>

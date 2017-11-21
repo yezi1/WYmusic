@@ -24,26 +24,26 @@
       {
         "pagePath": "page/foundThatMusic/foundThatMusic",
         "text": "发现音乐",
-        "iconPath": "/images/music.png",
-        "selectedIconPath": "/images/music_on.png"
+        "iconPath": "/images/public/music.png",
+        "selectedIconPath": "/images/public/music_on.png"
       },
       {
         "pagePath": "page/MeMusic/MeMusic",
         "text": "我的音乐",
-        "iconPath": "/images/myMusic.png",
-        "selectedIconPath": "/images/myMusic_on.png"
+        "iconPath": "/images/public/myMusic.png",
+        "selectedIconPath": "/images/public/myMusic_on.png"
       },
       {
         "pagePath": "page/friend/friend",
         "text": "朋友",
-        "iconPath": "/images/friend.png",
-        "selectedIconPath": "/images/friend_on.png"
+        "iconPath": "/images/public/friend.png",
+        "selectedIconPath": "/images/public/friend_on.png"
       },
       {
         "pagePath": "page/accountNumber/accountNumber",
         "text": "账号",
-        "iconPath": "/images/accountNumber.png",
-        "selectedIconPath": "/images/accountNumber_on.png"
+        "iconPath": "/images/public/accountNumber.png",
+        "selectedIconPath": "/images/public/accountNumber_on.png"
       }
     ]
   }
