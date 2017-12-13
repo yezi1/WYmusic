@@ -4,11 +4,11 @@
   <view class='searchBox'>
     <view class='search'>
       <view class='searchIcon'>
-        <image src='/images/foundThatMusic/other/searchIcon.png'></image>
+        <image src='{{ searchIcon }}'></image>
       </view>
-      <input placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
+      <input type="text" placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
       <view class='cancel'>
-        <image src='/images/foundThatMusic/other/cancel.png' wx:if='{{ searchState }}' catchtap='emptying'></image>
+        <image src='{{ cancel }}' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
 
@@ -35,7 +35,7 @@
         <block wx:for='{{ column }}'>
           <view class='othersList'>
             <view class='othersIcon'>
-              <image src='{{ item.images }}'></image>
+              <image src='{{ columnUrl[index] }}'></image>
             </view>
             <text>{{ item.text }}</text>
           </view>
@@ -47,12 +47,12 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐歌单</text>
-          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
+          <image src='{{ rightArrow }}'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ recommend }}'>
             <view class='hierarchycontent'>
-              <view class='hierarchyImg' style='background-image: url("{{ item.imgUrl }}");'></view>
+              <view class='hierarchyImg' style='background-image: url("{{ recommendUrl[index] }}");'></view>
               <text>{{ item.text }}</text>
             </view>
           </block>
@@ -64,12 +64,12 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>独家放送</text>
-          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
+          <image src='{{ rightArrow }}'></image>
         </view>
         <view class='exclusive'>
           <block wx:for='{{ exclusive }}'>
             <view class='exclusiveList'>
-              <image src='{{ item.imgUrl }}' mode='aspectFit'></image>
+              <image src='{{ exclusiveUrl[index] }}' mode='aspectFit'></image>
               <text>{{ item.text }}</text>
             </view>
           </block>
@@ -81,12 +81,12 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>最新音乐</text>
-          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
+          <image src='{{ rightArrow }}'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ latest }}'>
             <view class='hierarchycontent'>
-              <view class='hierarchyImg' style='background-image: url("{{ item.imgUrl }}");'></view>
+              <view class='hierarchyImg' style='background-image: url("{{ latestUrl[index] }}");'></view>
               <text>{{ item.text }}</text>
               <text class='describe'>{{ item.describe }}</text>
             </view>
@@ -99,15 +99,29 @@
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐MV</text>
-          <image src='/images/foundThatMusic/other/rightArrow.png'></image>
+          <image src='{{ rightArrow }}'></image>
         </view>
         <view class='hierarchyList'>
           <block wx:for='{{ mv }}'>
             <view class='mv'>
-              <image src='{{ item.imgUrl }}'></image>
+              <image src='{{ mvImgUrl[index] }}'></image>
               <text>{{ item.text }}</text>
+              <text>{{ item.particulars }}</text>
             </view>
           </block>
+        </view>
+      </view>
+
+      <!-- 精选专栏 -->
+      <view class='handpick'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>精选专栏</text>
+          <image src='{{ rightArrow }}'></image>
+        </view>
+        <view class='contentBox'>
+          <view class='leftBox'></view>
+          <view class='rightBox'></view>
         </view>
       </view>
     </view>

@@ -1,8 +1,10 @@
 page{
   background-color: #fafdff;
   font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 text{
   color: #343435;
+  text-indent: 10rpx;
 }

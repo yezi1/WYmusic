@@ -61,14 +61,42 @@ Page({
       url: getapp.localIp() + 'WYmusic/data/music.json',
       method: 'GET',
       success: function (res) {
+        var mvImgUrl = [];
+        var latestUrl = [];
+        var exclusiveUrl = [];
+        var recommendUrl = [];
+        var columnUrl = [];
+        for (var i in res.data.mv) {
+          mvImgUrl.push(getapp.localIp() + res.data.mv[i].imgUrl);
+        } 
+        for (var i in res.data.latest) {
+          latestUrl.push(getapp.localIp() + res.data.latest[i].imgUrl);
+        } 
+        for (var i in res.data.exclusive) {
+          exclusiveUrl.push(getapp.localIp() + res.data.exclusive[i].imgUrl);
+        } 
+        for (var i in res.data.recommend) {
+          recommendUrl.push(getapp.localIp() + res.data.recommend[i].imgUrl);
+        } 
+        for (var i in res.data.column) {
+          columnUrl.push(getapp.localIp() + res.data.column[i].imgUrl);
+        } 
         that.setData({
+          searchIcon: getapp.localIp() + res.data.searchIcon,
+          cancel: getapp.localIp() + res.data.cancel,
+          rightArrow: getapp.localIp() + res.data.rightArrow,
           classification: res.data.classification,
           roasting: res.data.roasting,
           column: res.data.column,
+          columnUrl: columnUrl,
           recommend: res.data.recommend,
+          recommendUrl: recommendUrl,
           exclusive: res.data.exclusive,
+          exclusiveUrl: exclusiveUrl,
           latest: res.data.latest,
-          mv: res.data.mv
+          latestUrl: latestUrl,
+          mv: res.data.mv,
+          mvImgUrl: mvImgUrl
         });
       },
       fail: function (err) {
@@ -120,7 +148,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log('11');
+    //console.log('11');
   },
 
   /**

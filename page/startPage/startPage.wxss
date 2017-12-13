@@ -3,6 +3,16 @@
   background-position: 50% 50%;
   width: 100%;
   height: 100%;
+  animation: bounceIn .5s  ease both;
+}
+
+@keyframes bounceIn{
+  0% {
+    transform:scale(.3);
+  }
+  100% {
+    transform:scale(1);
+  }
 }
 
 .skip{

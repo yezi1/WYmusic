@@ -1,4 +1,4 @@
-<view class='startContainer' style='background-image: url("../../images/public/StartPage.jpg"); height: {{ systemH }}px;'>
+<view class='startContainer' style='background-image: url("{{ bgUrl }}"); height: {{ systemH }}px;'>
   <view class='skip'>
     <text catchtap='jump'>跳过{{ countdown }}</text>
   </view>

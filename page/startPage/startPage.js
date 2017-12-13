@@ -8,10 +8,21 @@ Page({
   data: {
     countdown: '3'
   },
+  //bgUrl: '../../images/public/StartPage.jpg'
 
   systemHeight: function () {
     this.setData({
       systemH: getapp.publicHeight()
+    });
+    var that = this;
+    wx.request({
+      url: getapp.localIp() + 'WYmusic/data/music.json',
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          bgUrl: getapp.localIp() + res.data.startPage
+        });
+      }
     });
   },
 
