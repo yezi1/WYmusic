@@ -1,4 +1,4 @@
-<view class='findOutBox'>
+<scroll-view class='findOutBox' scroll-y='{{ !inputStatus }}' style='height: {{ wHeight - 73 }}px'>
 
   <!-- 搜索框 -->
   <view class='searchBox'>
@@ -6,11 +6,29 @@
       <view class='searchIcon'>
         <image src='{{ searchIcon }}'></image>
       </view>
-      <input type="text" placeholder='搜索音乐、视频、电台' bindinput='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
+      <input type="text" placeholder='搜索音乐、视频、电台' bindinput='inputState' bindfocus='searchFocus' bindblur='searchBlur' value="{{ searchinput }}"></input>
       <view class='cancel'>
         <image src='{{ cancel }}' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
+
+    <!-- 搜索历史 -->
+    <scroll-view class='{{ inputStatus ? "history history_no" : "history history_off" }}' style='height: {{ wHeight - 46 }}px'>
+      <view class='singer'>
+        <view class='content'>
+          <view class='singerIcon'>
+            <image src='{{ singerIcon }}'></image>
+          </view>
+          <text>歌手分类</text>
+          <view class='singerRarrow'>
+            <image src='{{ singerRarrow }}'></image>
+          </view>     
+        </view>
+      </view>
+      <block wx:for='{{ SongName }}'>
+        <view>{{ item.SongName }}</view>
+      </block>
+    </scroll-view>
 
     <!-- 轮播 -->
     <view class='classification'>
@@ -41,9 +59,9 @@
           </view>
         </block>
       </view>
-      <view class='hierarchy'>
 
-        <!-- 推荐歌单 -->
+      <!-- 推荐歌单 -->
+      <view class='hierarchy'>
         <view class='hierarchyTitle'>
           <view class='hierarchyLine'></view>
           <text>推荐歌单</text>
@@ -69,7 +87,7 @@
         <view class='exclusive'>
           <block wx:for='{{ exclusive }}'>
             <view class='exclusiveList'>
-              <image src='{{ exclusiveUrl[index] }}' mode='aspectFit'></image>
+              <image src='{{ exclusiveUrl[index] }}' ></image>
               <text>{{ item.text }}</text>
             </view>
           </block>
@@ -119,11 +137,36 @@
           <text>精选专栏</text>
           <image src='{{ rightArrow }}'></image>
         </view>
-        <view class='contentBox'>
-          <view class='leftBox'></view>
-          <view class='rightBox'></view>
+        <block wx:for="{{ handpick }}">
+          <view class='contentBox'>
+            <view class='leftBox'>
+              <text><text class='handpickType'>专栏</text>{{ item.text }}</text>
+              <text>阅读{{ item.readCount }}</text>
+            </view>
+            <view class='rightBox'>
+              <image src='{{ handpickUrl[index] }}' mode='aspectFill'></image>
+            </view>
+          </view>
+        </block>
+      </view>
+
+      <!-- 主播电台 -->
+      <view class='hierarchy footer'>
+        <view class='hierarchyTitle'>
+          <view class='hierarchyLine'></view>
+          <text>主播电台</text>
+          <image src='{{ rightArrow }}'></image>
+        </view>
+        <view class='hierarchyList'>
+          <block wx:for='{{ anchor }}'>
+            <view class='hierarchycontent'>
+              <view class='hierarchyImg' style='background-image: url("{{ anchorUrl[index] }}");'></view>
+              <text>{{ item.text }}</text>
+            </view>
+          </block>
         </view>
       </view>
+
     </view>
     <view wx:elif='{{ positionNum == 40 }}'>
       <text>视频</text>
@@ -132,4 +175,4 @@
       <text>电台</text>
     </view>
   </view>
-</view>
+</scroll-view>

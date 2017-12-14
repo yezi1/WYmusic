@@ -8,18 +8,61 @@ Page({
   data: {
     searchState: false,
     searchtext: '',
-    positionNum: '7'
+    positionNum: '7',
+    inputStatus: false, 
   },
 
-  searchFocus: function (event) {
+  inputState: function (event) {
     this.data.searchtext = event.detail.value;
     if (this.data.searchtext.length > 0) {
       this.data.searchState = true;
     }else{
       this.data.searchState = false;
     }
+    this.requestData();
     this.setData({
-      searchState: this.data.searchState
+      searchState: this.data.searchState  
+    });
+  },
+
+  // inputState: function () {
+  //   this.data.inputStatus = false;
+  //   this.setData({
+  //     inputStatus: this.data.inputStatus
+  //   });
+  // },
+
+  requestData: function () {
+    var that = this;
+    var resData = [];
+    wx.request({
+      url: 'http://songsearch.kugou.com/song_search_v2?userid=-1&clientver=&platform=WebFilter&tag=em&filter=2&iscorrection=1&privilege_filter=0&_=1510210621763&keyword=' + this.data.searchtext + '&page=1&pagesize=20',
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      dataType: "jsonp",
+      success: function (res) {
+        //for (var i in res.data) {
+        var jsonRes = JSON.parse(res.data);
+        for (var i in jsonRes.data.lists) {
+          resData.push(jsonRes.data.lists[i]);
+        }
+        console.log(resData);
+        that.setData({
+          SongName: resData
+        });
+      },
+      fail: function (err) {
+        console.log(err.errMsg);
+      }
+    });    
+  },
+
+  searchFocus: function () {
+    this.data.inputStatus = true;
+    this.setData({
+      inputStatus: this.data.inputStatus
     });
   },
 
@@ -56,16 +99,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
+    let that = this;    
     wx.request({
       url: getapp.localIp() + 'WYmusic/data/music.json',
       method: 'GET',
       success: function (res) {
+        var win = wx.getSystemInfoSync();
         var mvImgUrl = [];
         var latestUrl = [];
         var exclusiveUrl = [];
         var recommendUrl = [];
         var columnUrl = [];
+        var handpickUrl = [];
+        var anchorUrl = [];
         for (var i in res.data.mv) {
           mvImgUrl.push(getapp.localIp() + res.data.mv[i].imgUrl);
         } 
@@ -80,8 +126,15 @@ Page({
         } 
         for (var i in res.data.column) {
           columnUrl.push(getapp.localIp() + res.data.column[i].imgUrl);
-        } 
+        }
+        for (var i in res.data.handpick) {
+          handpickUrl.push(getapp.localIp() + res.data.handpick[i].imgUrl);
+        }
+        for (var i in res.data.anchor) {
+          anchorUrl.push(getapp.localIp() + res.data.anchor[i].imgUrl);
+        }  
         that.setData({
+          wHeight: win.windowHeight,
           searchIcon: getapp.localIp() + res.data.searchIcon,
           cancel: getapp.localIp() + res.data.cancel,
           rightArrow: getapp.localIp() + res.data.rightArrow,
@@ -96,7 +149,13 @@ Page({
           latest: res.data.latest,
           latestUrl: latestUrl,
           mv: res.data.mv,
-          mvImgUrl: mvImgUrl
+          mvImgUrl: mvImgUrl,
+          handpick: res.data.handpick,
+          handpickUrl: handpickUrl,
+          anchor: res.data.anchor,
+          anchorUrl: anchorUrl,
+          singerIcon: getapp.localIp() + res.data.singerIcon,
+          singerRarrow: getapp.localIp() + res.data.singerRarrow
         });
       },
       fail: function (err) {

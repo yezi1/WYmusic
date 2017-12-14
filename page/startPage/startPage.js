@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    countdown: '3'
+    countdown: '1'
   },
   //bgUrl: '../../images/public/StartPage.jpg'
 

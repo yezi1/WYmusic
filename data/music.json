@@ -3,6 +3,8 @@
   "searchIcon": ["WyMusicData/images/foundThatMusic/other/searchIcon.png"],
   "rightArrow": ["WyMusicData/images/foundThatMusic/other/rightArrow.png"],
   "cancel": ["WyMusicData/images/foundThatMusic/other/cancel.png"],
+  "singerIcon": ["WyMusicData/images/foundThatMusic/other/singerIcon.png"],
+  "singerRarrow": ["WyMusicData/images/foundThatMusic/other/singerRarrow.png"],
   "classification": [
     {
       "text": "音乐",
@@ -177,6 +179,49 @@
     {
       "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_1.png",
       "text": "每天一篇散文触碰灵魂的散文"
+    }
+  ],
+  "handpick": [
+    {
+      "text": "我知道，那个最好的张惠妹又回来了!",
+      "readCount": "11795",
+      "imgUrl": "WyMusicData/images/foundThatMusic/handpick/handpick_1.png"
+    },
+    {
+      "text": "蒋勤勤四十二岁了，却依然是许多人心中的“梦”",
+      "readCount": "9539",
+      "imgUrl": "WyMusicData/images/foundThatMusic/handpick/handpick_2.png"
+    },
+    {
+      "text": "让骚气的神经学医生教你如何做人",
+      "readCount": "3141",
+      "imgUrl": "WyMusicData/images/foundThatMusic/handpick/handpick_3.png"
+    }
+  ],
+  "anchor": [
+    {
+      "text": "影响你未来的100次心理谈话",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_1.png"
+    },
+    {
+      "text": "任志宏讲述国宝背后的故事",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_2.png"
+    },
+    {
+      "text": "焦元赙古典音乐入门指南",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_3.png"
+    },
+    {
+      "text": "愿有故事的人被温柔相待",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_4.png"
+    },
+    {
+      "text": "一秒钟吸引你全部注意力的歌声",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_5.png"
+    },
+    {
+      "text": "带你体验更加性感真实的声音",
+      "imgUrl": "WyMusicData/images/foundThatMusic/anchor/anchor_6.jpg"
     }
   ]
 }
