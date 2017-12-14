@@ -11,9 +11,9 @@
         <image src='{{ cancel }}' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
-
+<audio src="{{src}}" id="myAudio" controls loop style=' position: fixed; top: 150px;'></audio>
     <!-- 搜索历史 -->
-    <scroll-view class='{{ inputStatus ? "history history_no" : "history history_off" }}' style='height: {{ wHeight - 46 }}px'>
+    <scroll-view class='{{ inputStatus ? "history history_no" : "history history_off" }}' style='height: {{ wHeight - 46 }}px' scroll-y='true'>
       <view class='singer'>
         <view class='content'>
           <view class='singerIcon'>
@@ -21,13 +21,16 @@
           </view>
           <text>歌手分类</text>
           <view class='singerRarrow'>
-            <image src='{{ singerRarrow }}'></image>
+            <image src='{{ singerRarrow }}'></image>           
           </view>     
         </view>
       </view>
-      <block wx:for='{{ SongName }}'>
-        <view>{{ item.SongName }}</view>
-      </block>
+      <block wx:for='{{ songHash }}'>
+        <view class='songList' wx:if='{{ searchState }}' data-hash='{{ songHash[index] }}' catchtap='playMusic'>
+          <view class='listLeft'></view>
+            <view class='listRight'>{{ songName[index] }}</view>
+        </view>
+      </block>  
     </scroll-view>
 
     <!-- 轮播 -->
@@ -169,7 +172,7 @@
 
     </view>
     <view wx:elif='{{ positionNum == 40 }}'>
-      <text>视频</text>
+      <text bindtap="audioPlay">视频</text>
     </view>
     <view wx:else>
       <text>电台</text>

@@ -93,6 +93,7 @@ swiper{
   z-index: 10;
   opacity: 0;
   display: none;
+  padding-top: 80rpx;
 }
 
 .history_no{
@@ -131,11 +132,17 @@ swiper{
 }
 
 .singer{
+  width: 100%;
   height: 80rpx;
   border-bottom: 1px solid #dbdcde;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 46px;
+  left: 0;
+  z-index: 999;
+  background-color: white;
 }
 
 .singerIcon{
@@ -167,6 +174,26 @@ swiper{
 .singerRarrow>image{
   width: 100%;
   height: 100%;
+}
+
+.songList{
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.listLeft{
+  flex: 50rpx 0 0;
+}
+
+.listRight{
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 
 /**
