@@ -185,7 +185,7 @@
   width: 92%;
   height: 400rpx;
   margin: 0 auto;
-  background-color: red;
+  /* background-color: red; */
   position: absolute;
   bottom: 0;
   left: 4%;
@@ -199,13 +199,114 @@
   width: 75%;
   height: 100%;
   margin: 0 auto;
-  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  
+  /* background-color: yellow; */
+}
+
+.elseBox>view{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elseBox_list>image{
+  width: 40%;
+  height: 40%;
 }
 
 .operationList_2{
-  height: 110rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.atPresent,.end{
+  flex: 90rpx 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+
+.progressBar{
+  flex: 1;
+  position: relative;
+}
+
+.progressBar>slider{
+  margin-top: 10rpx;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .operationList_3{
   height: 150rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.playListBox{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playListBox>image{
+  width: 80%;
+  height: 80%;
+}
+
+.playListBox:nth-child(1) image{
+  width: 40%;
+  height: 40%;
+}
+
+.playListBox:nth-child(2) image{
+  width: 50%;
+  height: 50%;
+}
+
+.playListBox:nth-child(4) image{
+  width: 50%;
+  height: 50%;
+}
+
+.playListBox:nth-child(5) image{
+  width: 30%;
+  height: 30%;
+}
+
+/**
+ * 播放进度条
+ */
+.slider{
+  width: 50%!important;
+}
+
+.wx-slider-handle{
+  height: 35rpx!important;
+  width: 35rpx!important;
+  margin-top: -15rpx!important;
+  margin-left: -15rpx!important;
+}
+
+.wx-slider-handle:after{
+  content: '';
+  width: 26.5%;
+  height: 30%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #d33a32;
+  border-radius: 50%;
 }

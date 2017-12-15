@@ -5,6 +5,21 @@
   "cancel": ["WyMusicData/images/foundThatMusic/other/cancel.png"],
   "singerIcon": ["WyMusicData/images/foundThatMusic/other/singerIcon.png"],
   "singerRarrow": ["WyMusicData/images/foundThatMusic/other/singerRarrow.png"],
+  "operation": [
+    "WyMusicData/images/allSongs/collect_off.png",
+    "WyMusicData/images/allSongs/down.png",
+    "WyMusicData/images/allSongs/comment.png",
+    "WyMusicData/images/allSongs/particulars.png",
+    "WyMusicData/images/allSongs/collect_on.png",
+    "WyMusicData/images/allSongs/list.png",
+    "WyMusicData/images/allSongs/nextSong.png",
+    "WyMusicData/images/allSongs/play.png",
+    "WyMusicData/images/allSongs/prev.png",
+    "WyMusicData/images/allSongs/playList.png",
+    "WyMusicData/images/allSongs/random.png",
+    "WyMusicData/images/allSongs/circulation.png",
+    "WyMusicData/images/allSongs/pause.png"
+  ],
   "classification": [
     {
       "text": "音乐",

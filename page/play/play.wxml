@@ -56,11 +56,43 @@
 <view class='operationBox'>
   <view class='operationList_1'>
     <view class='elseBox'>
-
+      <view class='elseBox_list'>
+        <image src='{{ musicIcon[0] }}' alt='未收藏'></image>
+      </view>
+      <view class='elseBox_list'>
+        <image src='{{ musicIcon[1] }}' alt='下载' catchtap='downloadMusic'></image>
+      </view>
+      <view class='elseBox_list'>
+        <image src='{{ musicIcon[2] }}' alt='评论'></image>
+      </view>
+      <view class='elseBox_list'>
+        <image src='{{ musicIcon[3] }}' alt='歌曲详情'></image>
+      </view>
     </view>
   </view>
   <view class='operationList_2'>
-    <slider min="50" max="200" />
+    <view class='atPresent'>{{ atPresentTime }}</view>
+    <view class=' progressBar'>
+      <slider min='0' max='{{ end }}' value='{{ atPresent }}' activeColor='#d33a32'/>
+    </view>
+    <view class='end'>{{ endTimes }}</view>
   </view>
-  <view class='operationList_3'></view>
+  <view class='operationList_3'>
+    <view class='playListBox'>
+      <image src='{{ musicIcon[5] }}' alt='列表循环'></image>
+    </view>
+    <view class='playListBox'>
+      <image src='{{ musicIcon[6] }}' alt='上一曲'></image>
+    </view>
+    <view class='playListBox'>
+      <image src='{{ musicIcon[12] }}' alt='暂停' catchtap='pauseMusic' wx:if='{{ playStatus }}'></image>
+      <image src='{{ musicIcon[7] }}' alt='播放' catchtap='playMusic' wx:else></image>
+    </view>
+    <view class='playListBox'>
+      <image src='{{ musicIcon[8] }}' alt='下一曲'></image>
+    </view>
+    <view class='playListBox'>
+      <image src='{{ musicIcon[9] }}' alt='播放列表'></image>
+    </view>
+  </view>
 </view>
