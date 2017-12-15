@@ -10,11 +10,7 @@ Page({
     searchtext: '',
     positionNum: '7',
     inputStatus: false, 
-    musicHash: null,
-poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
-    name: '此时此刻',
-    author: '许巍',
-    src: 'http://fs.w.kugou.com/201712142213/e77e42385f5006fa399cd1c90bc04094/G059/M02/17/1D/ew0DAFdr9KmAf5GnADSkTnjFCm0437.mp3'    
+    musicHash: null
   },
 
   inputState: function (event) {
@@ -128,15 +124,11 @@ poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?ma
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: '当前页面当前页面当前页面当前页面当前页面'
-    })
     let that = this;    
     wx.request({
       url: getapp.localIp() + 'WYmusic/data/music.json',
       method: 'GET',
-      success: function (res) {
-        var win = wx.getSystemInfoSync();
+      success: function (res) {      
         var mvImgUrl = [];
         var latestUrl = [];
         var exclusiveUrl = [];
@@ -166,7 +158,7 @@ poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?ma
           anchorUrl.push(getapp.localIp() + res.data.anchor[i].imgUrl);
         }  
         that.setData({
-          wHeight: win.windowHeight,
+          wHeight: getapp.publicHeight(),
           searchIcon: getapp.localIp() + res.data.searchIcon,
           cancel: getapp.localIp() + res.data.cancel,
           rightArrow: getapp.localIp() + res.data.rightArrow,

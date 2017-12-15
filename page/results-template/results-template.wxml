@@ -1,0 +1,22 @@
+<template name="results">
+  <!-- 搜索结果 -->
+  <scroll-view class='{{ inputStatus ? "results results_no" : "results results_off" }}' style='height: {{ wHeight - 46 }}px' scroll-y='true'>
+    <!-- <view class='singer'>
+      <view class='content'>
+        <view class='singerIcon'>
+          <image src='{{ singerIcon }}'></image>
+        </view>
+        <text>歌手分类</text>
+        <view class='singerRarrow'>
+          <image src='{{ singerRarrow }}'></image>           
+        </view>     
+      </view>
+    </view> -->
+    <block wx:for='{{ songHash }}'>
+      <view class='songList' wx:if='{{ searchState }}' data-hash='{{ songHash[index] }}' catchtap='playMusic'>
+        <view class='listLeft'></view>
+          <view class='listRight'>{{ songName[index] }}</view>
+      </view>
+    </block>  
+  </scroll-view>
+</template>    

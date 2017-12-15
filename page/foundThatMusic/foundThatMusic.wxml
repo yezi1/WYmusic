@@ -1,3 +1,5 @@
+<import src='../results-template/results-template.wxml'/>
+
 <scroll-view class='findOutBox' scroll-y='{{ !inputStatus }}' style='height: {{ wHeight - 73 }}px'>
 
   <!-- 搜索框 -->
@@ -11,27 +13,14 @@
         <image src='{{ cancel }}' wx:if='{{ searchState }}' catchtap='emptying'></image>
       </view>
     </view>
-<audio src="{{src}}" id="myAudio" controls loop style=' position: fixed; top: 150px;'></audio>
+
+    <!--<audio src="{{src}}" id="myAudio" controls loop style=' position: fixed; top: 150px;'></audio>-->
+
     <!-- 搜索历史 -->
-    <scroll-view class='{{ inputStatus ? "history history_no" : "history history_off" }}' style='height: {{ wHeight - 46 }}px' scroll-y='true'>
-      <view class='singer'>
-        <view class='content'>
-          <view class='singerIcon'>
-            <image src='{{ singerIcon }}'></image>
-          </view>
-          <text>歌手分类</text>
-          <view class='singerRarrow'>
-            <image src='{{ singerRarrow }}'></image>           
-          </view>     
-        </view>
-      </view>
-      <block wx:for='{{ songHash }}'>
-        <view class='songList' wx:if='{{ searchState }}' data-hash='{{ songHash[index] }}' catchtap='playMusic'>
-          <view class='listLeft'></view>
-            <view class='listRight'>{{ songName[index] }}</view>
-        </view>
-      </block>  
-    </scroll-view>
+    
+
+    <!-- 搜索结果 -->
+    <template is="results" data="{{ inputStatus, songHash, searchState, songHash, songName }}"/>
 
     <!-- 轮播 -->
     <view class='classification'>

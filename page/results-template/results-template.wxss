@@ -1,0 +1,110 @@
+/**
+ * 搜索历史
+ */
+.results{
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  display: none;
+}
+
+.results_no{
+  display: block;
+  animation: bounTop .3s  ease both;
+}
+
+@keyframes bounTop{
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 46px;
+    opacity: 1;
+    
+  }
+}
+
+.results_off{
+  
+  animation: bounTop2 .3s  ease both;
+}
+
+@keyframes bounTop2{
+  0% {
+    top: 46px;
+    opacity: 1;
+  }
+  100% {
+    top: 50px;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.singer{
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1px solid #dbdcde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 46px;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+}
+
+.singerIcon{
+  height: 43rpx;
+  width: 43rpx;
+}
+
+.singerIcon>image{
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content>text{
+  font-size: 30rpx;
+}
+
+.singerRarrow{
+  width: 21rpx;
+  height: 27rpx;
+  margin-left: 8px;
+}
+
+.singerRarrow>image{
+  width: 100%;
+  height: 100%;
+}
+
+.songList{
+  font-size: 30rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.listLeft{
+  flex: 50rpx 0 0;
+}
+
+.listRight{
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
