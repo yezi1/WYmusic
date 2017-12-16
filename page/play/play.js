@@ -1,7 +1,7 @@
 // page/play-template/play-template.js
 const getapp = new getApp();
 const backgroundAudioManager = wx.getBackgroundAudioManager();
-
+var current = '';
 Page({
 
   /**
@@ -18,9 +18,6 @@ Page({
   playMusic: function () {
     backgroundAudioManager.play();
     this.data.playStatus = true;
-    wx.playBackgroundAudio({
-      dataUrl: this.data.musicDataUrl,
-    });
     this.setData({
       playStatus: this.data.playStatus
     });
@@ -31,20 +28,41 @@ Page({
    */
   pauseMusic: function () {
     backgroundAudioManager.pause();
-   // wx.pauseBackgroundAudio();
     this.data.playStatus = false;
     this.setData({
       playStatus: this.data.playStatus
     });
   },
 
+  /**
+   * 设置播放进度
+   */
+  setProgress: function () {
+    console.log('8');
+    clearInterval(current);
+    backgroundAudioManager.pause();
+    var setTime = 100;
+    backgroundAudioManager.startTime = 100;
+    //backgroundAudioManager.play();
+    // setTimeout(function(){
+    //   backgroundAudioManager.seek = setTime;
+    //   backgroundAudioManager.play();
+    // },100);
+  },
+
+  /**
+   * 拖动进度条暂停音乐
+   */
+  // suspendedMusic: function () {
+  //   console.log('3');
+  //   clearInterval(current);
+  // },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
-
     backgroundAudioManager.title = '此时此刻'
     backgroundAudioManager.epname = '此时此刻'
     backgroundAudioManager.singer = '汪峰'
@@ -53,7 +71,7 @@ Page({
     //this.data.musicDataUrl = 'http://fs.w.kugou.com/201712161041/df789544227ddee4c6d2becab86f2ab7/G002/M08/02/13/ooYBAFT-JiqABNIaAEBvMGDr7qI119.mp3'; 
     
     //当前歌曲播放时间
-    setInterval(function(){
+    current = setInterval(function(){
       var t = backgroundAudioManager.currentTime;
       var atPresentTime = Math.floor(t / 60) + ":" + (t % 60 / 100).toFixed(2).slice(-2);
       that.setData({
@@ -63,7 +81,7 @@ Page({
     },1000);
 
     //歌曲结束时间
-    setTimeout(function(){
+    var musicEndTime = setTimeout(function(){
       var t = backgroundAudioManager.duration;
       var endTime = Math.floor(t / 60) + ":" + (t % 60 / 100).toFixed(2).slice(-2);
       that.setData({

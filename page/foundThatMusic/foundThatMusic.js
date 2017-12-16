@@ -26,13 +26,6 @@ Page({
     });
   },
 
-  // inputState: function () {
-  //   this.data.inputStatus = false;
-  //   this.setData({
-  //     inputStatus: this.data.inputStatus
-  //   });
-  // },
-
   //搜索音乐接口
   requestData: function () {
     var that = this;

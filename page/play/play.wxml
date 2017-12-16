@@ -1,6 +1,10 @@
 <view class='musicBox'>
+
+  <!-- 背景毛玻璃效果 -->
   <view class='musicBg' style='width: 100%; height: {{ wHeight }}px; background: url(http://singerimg.kugou.com/uploadpic/softhead/400/20170807/20170807145802238.jpg)'>   
   </view>
+
+  <!-- 黑胶唱片唱针部分 -->
   <view class='stylusBox' style='top: {{ -stylusW*0.5 }}px'>
     <view class='stylus_1' style='width: {{ stylusW }}px; height: {{ stylusW }}px'>
       <view class='stylus_2'>
@@ -19,6 +23,8 @@
       </view>
     </view>
   </view>
+  
+  <!-- 黑胶唱片部分 -->
   <view class='level_1' style='width: {{ panW*0.9 }}px; height: {{ panW*0.9 }}px'>
     <view class='level_2'>
       <view class='level_3'>
@@ -53,6 +59,8 @@
     </view>
   </view>
 </view>
+
+<!-- 收藏等操作区 -->
 <view class='operationBox'>
   <view class='operationList_1'>
     <view class='elseBox'>
@@ -70,13 +78,17 @@
       </view>
     </view>
   </view>
+
+  <!-- 音乐进度条 -->
   <view class='operationList_2'>
     <view class='atPresent'>{{ atPresentTime }}</view>
     <view class=' progressBar'>
-      <slider min='0' max='{{ end }}' value='{{ atPresent }}' activeColor='#d33a32'/>
+      <slider min='0' max='{{ end }}' value='{{ atPresent }}' activeColor='#d33a32' bindchange='setProgress' bindchanging='suspendedMusic'/>
     </view>
     <view class='end'>{{ endTimes }}</view>
   </view>
+
+  <!-- 音乐播放操作 -->
   <view class='operationList_3'>
     <view class='playListBox'>
       <image src='{{ musicIcon[5] }}' alt='列表循环'></image>
